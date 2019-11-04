@@ -1,5 +1,5 @@
 # Victorya-restaurant
-website for a Victoria restaurant (landing page)
+Website for a Victoria restaurant (landing page)
 ## tools:
 1. Html5
 2. SASS
