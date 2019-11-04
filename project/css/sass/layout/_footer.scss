@@ -1,0 +1,38 @@
+footer {
+    overflow: hidden;
+    padding-top: 80px;
+    background: url('/project/images/australia.jpg') no-repeat right content-box;
+    @media#{$max-mobile} {
+        background: none;
+    }
+    nav {
+        margin-right: 4%;
+        overflow: hidden;
+        border-top: 1px solid #e4e3e3;
+        border-bottom: 1px solid #e4e3e3;
+        @include navbar;
+    }
+    .social {
+        display: flex;
+        li {
+            color: $main-color;
+            padding: 0 12px;
+            cursor: pointer;
+            i {
+                font-weight: bold;
+                &:hover {
+                    color:#255A7E;
+                    @include trans;
+                }
+            }
+        }
+    }
+    .copyrights {
+        p {
+            text-align: center;
+            font-family: 'Domine', serif;
+            color: $main-color;
+        }
+        
+    }
+}

@@ -1,0 +1,75 @@
+@mixin trans {
+    transition: all .5s ease-in-out;
+}
+// Place Holder Selector
+
+%directions {
+    float: $floatl;
+    width: 50%; 
+}
+
+//overlay 
+@mixin overlay {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(34, 58, 74, 0.6);
+    border-radius: 10px;
+    color: #fff;
+}
+
+// navbar mixin
+@mixin  navbar {
+.logo {
+    position: relative;
+    @media#{$max-mobile} {
+        width: 100%;
+        padding-top: 15px;
+    }
+    @media#{$min-small} {
+        width: 30%;
+        float: $floatl;
+        padding-top: 15px;
+     }
+    }
+    .navbar {
+        overflow: hidden;
+        @media#{$max-mobile} {
+            display: block;
+            text-align: center;
+            background: rgba($btn-color, 0.8);
+            display: none;
+        }
+        @media#{$min-small} {
+            width: 70%;
+            float: $floatl;
+            display: flex;
+         }
+
+        li {
+            padding: 20px 15px;
+            @media#{$max-mobile} {
+                &:not(:last-child) {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+            
+            a {
+                color: $p-color;
+                font-weight: bold;
+                @media#{$max-mobile} {
+                    color: #fff;
+                }
+                &:hover {
+                    color: $main-color;
+                    @include trans;
+                }
+            }
+        }
+    }
+}

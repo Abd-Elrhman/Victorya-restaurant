@@ -1,0 +1,293 @@
+/*** Start OverView ***/
+.overview {
+    background: url('/project/images/overview-bg.png') no-repeat  top center;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 80px;
+    /** Start Upper OverView **/
+    .upper-overview {
+        overflow: hidden;
+        .upp-img {
+            @extend %directions;
+            @media#{$max-mobile} {
+                display: block;
+                width: 100%;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+        .upp-content {
+            @extend %directions;
+            @media#{$max-mobile} {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding-bottom: 70px;
+            }
+            @media#{$min-small} {
+                padding-bottom: 70px;
+            }
+            h2 {
+                @include main-head;
+                @media#{$max-mobile} {
+                    margin-top: 2px;
+                }
+                @media#{$min-small} {
+                    margin-top: 40px;
+                }
+                @media#{$min-large} {
+                    margin-top: 130px;
+                }
+            }
+            p {
+                @include main-p;
+            }
+        }
+    }
+    /** Start Down OverView **/
+    .down-overview {
+        overflow: hidden;
+        padding-bottom: 70px;
+        .down-image {
+            overflow: hidden;
+            @media#{$max-mobile} {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 40px;
+             }
+            @media#{$min-small} {
+                @extend %directions;
+                float: $floatr;
+                padding-left: 20px;
+             }
+            .left {
+                @extend %directions;
+                text-align: $textr;
+                margin-top: 110px;
+                //display: block;
+                img {
+                    max-width: 100%;
+                    padding-right: 5px;
+                    padding-bottom: 3px;
+                }
+            }
+            .right {
+                @extend %directions;
+                img {
+                    max-width: 100%;
+                    padding-bottom: 3px;
+                    @media#{$max-mobile} {
+                        float: left;
+                     }
+                }
+            }
+        }
+        .down-content {
+            @media#{$max-mobile} {
+                display: block;
+                width: 100%;
+                text-align: center;
+             }
+            @media#{$min-small} {
+                @extend %directions;
+                padding-right: 20px;
+             }
+            h2 {
+                @include main-head;
+                margin-top: 0;
+            }
+            p {
+                @include main-p;
+            }
+        }
+    }
+    /** Start Image Salat **/
+    .image-salat {
+        background: url('/project/images/buffet.jpg') no-repeat  top center;
+        background-size: cover;
+        border-radius: 10px;       
+        .overlay {
+            @include overlay;
+            position: relative;
+            padding: 35px 115px;
+            @media#{$max-mobile} {
+                padding: 35px 10px;
+             }
+            h2 {
+                @include main-head;
+                color: #fff;
+            }
+            p {
+                @include main-p;
+                margin-bottom: 0;
+                color: #e3ebf1;
+            }
+            button {
+                background: none;
+                color: #fff;
+                border: 2px solid #fff;
+                box-shadow: none;
+                font-weight: 400;
+                @media#{$max-mobile} {
+                    margin-top: 15px;
+                 }
+                &:hover {
+                    color: $btn-color;
+                    background: #fff;
+                }
+            }
+            h5 {
+                font-weight: 400;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+/*** End OverView ***/
+/*** Start Our Foods ***/
+.our-foods {
+    margin-bottom: 80px;
+    h2 {
+        @include main-head;
+        text-align: center;
+        margin: 0;
+    }
+    .fisrt-p {
+        @include main-p;
+        text-align: center;
+    }
+    .item-box {
+        .item {
+            box-shadow: 0 17px 16px #EBF1F5;
+            margin-bottom: 5%;
+            border-radius: 5px;
+            cursor: pointer;
+            transform: scale(1);
+            transition: .3s ease-in-out;
+            overflow: hidden;
+            margin-right: 1%;
+            margin-left: 1%;
+            @media#{$max-mobile} {
+            width: 48%;
+            float: $floatl;
+            }
+            @media#{$min-small} {
+                width: 31.333%;
+                float: $floatl;
+             }
+            &:hover {
+                transform: scale(1.1);
+            }
+            img {
+                width: 100%;
+            }
+            h3 {
+                font-family: 'Domine', serif;
+                color: $main-color;
+                padding: 0px 10px;
+                span {
+                    color: $btn-color;
+                    float: $floatr;
+                }
+            }
+            p {
+                @include main-p;
+                padding: 0px 10px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    .last-button {
+        text-align: center;
+    }
+}
+/*** End Our Foods ***/
+/*** Start Popular Recipes ***/
+.popular-recipes {
+    position: relative;
+    h2 {
+        @include main-head;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+    figure {
+        position: relative;
+        &:hover {
+            figcaption {
+                display: block;
+                cursor: pointer;
+            }
+        }
+        figcaption {
+            @include overlay;
+            line-height: 1.2em;
+            display: none;
+            .place {
+                position: absolute;
+                bottom: 20%;
+                right: 2%;
+                left: 2%;
+                p {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+            }
+            span {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 3% 9%;
+                background-color: $btn-color;
+                cursor: pointer;
+                border-radius: 3px;
+                i {
+                    transition: .3s ease-in-out;
+                    color: #fff;
+                    &:hover {
+                        transform: scale(1.5);
+                    }
+                }
+            } 
+        }
+    }
+        img {
+            max-width: 100%;
+    }
+}
+/*** End Popular Recipes ***/
+/*** Start Lasted Updates ***/
+.lasted-updates {
+    background: url('/project/images/Group\ 102.png') no-repeat  top center;
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    h2 {
+        @include main-head; 
+    }
+    form {
+        input {
+            padding: 0 2%;
+            width: 400px;
+            height: 60px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            margin-bottom: 10px;
+            background-color: #ebf1f5;
+            @media#{$max-mobile} {
+                width: 300px;
+                text-align: center;
+            }
+        }
+        button {
+            width: 200px;
+            height: 60px;
+        }
+    }
+}
+/*** End Lasted Updates ***/

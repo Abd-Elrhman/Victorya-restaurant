@@ -1,0 +1,58 @@
+header {
+    background: url('/project/images/head-upbg.png'), url('/project/images/head-bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    @media#{$max-mobile} {
+        height: auto;
+    }
+    nav {
+        @include navbar;
+    }
+    .content {
+        h1 {
+            color: #255A7E;
+            @media#{$max-mobile} {
+                padding-top: 11vh;
+                font-weight: 300;
+                font-size: 3.3rem;
+            }
+            @media#{$min-small} {
+            padding-top: 30vh;
+            width: 700px;
+            font-weight: 300;
+            font-size: 4rem;
+            
+            }    
+        }
+        p {
+            @media#{$max-mobile} {
+                width: auto;
+            }
+            @include main-p;
+            color: $main-color;
+            width: 550px;
+        }
+        .order {
+            @media#{$max-mobile} {
+                text-align: center;
+                margin-bottom: 10px;
+            } 
+            .order-now {
+                width: 204px;
+            }
+            h5 {
+                display: inline;
+                margin: 20px;
+                color: #0B314B;
+                @media#{$max-mobile} {
+                    display: block;
+                } 
+            }
+        }
+    }
+    
+}
